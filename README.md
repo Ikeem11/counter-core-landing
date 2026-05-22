@@ -44,12 +44,10 @@ Every push to `main` redeploys automatically.
 Add a `CNAME` file at the repo root containing the domain (e.g. `countercore.app`), then
 point DNS at GitHub Pages (`ikeem11.github.io`).
 
-## Before submitting to Riot Developer Portal
+## URLs used in the Riot Developer Portal submission
 
-- Replace `https://countercore.app` with the live Pages URL everywhere the form asks for
-  it.
-- Replace `https://countercore.app/privacy` with `<pages-url>/privacy.html`.
-- Confirm the Riot disclaimer is visible on both pages (it is — see footer of
-  `index.html` and `privacy.html`).
+- **Product URL:** <https://ikeem11.github.io/counter-core-landing/>
+- **Privacy policy URL:** <https://ikeem11.github.io/counter-core-landing/privacy.html>
+- Riot disclaimer is in the footer of both pages (`index.html`, `privacy.html`).
 - Do not publish the app until Riot registration reaches **"Approved" / "Acknowledged"**
   status (`COMPLIANCE.md §8` pre-launch gate in the main repo).
