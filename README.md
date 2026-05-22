@@ -1,61 +1,55 @@
 # CounterCore — Landing Site
 
-Static site for the CounterCore product URL submitted to the Riot Developer Portal.
+Public landing site for **CounterCore**, the League of Legends adaptive counter-build
+overlay app. The main app repository lives privately at
+[`Ikeem11/counter-core`](https://github.com/Ikeem11/counter-core); this repo holds only
+the marketing site so it can be served by GitHub Pages on the free plan.
+
+This site is the public **Product URL** submitted to the Riot Games Developer Portal
+(`SPEC.md §11` / `DEVELOPER-PORTAL-REGISTRATION.md` in the main repo).
 
 ## Files
 
 ```
-landing/
+.
 ├── index.html          Landing page
 ├── privacy.html        Privacy policy page
 ├── styles.css          Shared styles (Tactical Obsidian design system)
 ├── fonts/
-│   └── inter.woff2     Self-hosted Inter (copied from src/renderer/fonts/)
+│   └── inter.woff2     Self-hosted Inter
 └── README.md           This file
 ```
 
-**Zero build step.** Plain HTML + CSS. No compilation, no npm install, no framework.
+**Zero build step.** Plain HTML + CSS. No compilation, no `npm install`, no framework.
 
----
+## Compliance
 
-## Deploy to Cloudflare Pages (chosen host)
+- Self-hosted Inter font only — **no third-party CDN / external network call at runtime.**
+- Exact Riot disclaimer from `COMPLIANCE.md §6` (main repo) appears in the footer of both
+  pages.
+- "Coming Soon" CTA — no fake download link, no fake testimonials.
+- Brand is distinct from Riot / League of Legends UI per `COMPLIANCE.md §6`.
 
-1. Sign in at [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** →
-   **Create application** → **Pages** tab → **Connect to Git**.
-2. Authorize Cloudflare to access GitHub if prompted, then select the
-   `Ikeem11/counter-core` repository → **Begin setup**.
-3. **Project name:** `counter-core` (becomes the subdomain). Production branch: `main`.
-4. **Build settings:**
-   - Framework preset: **None**
-   - Build command: *(leave blank)*
-   - Build output directory: **`landing`**
-   - Root directory (Advanced): *(leave blank — defaults to repo root)*
-5. **Save and Deploy.**
+## Deploy (GitHub Pages)
 
-Cloudflare publishes at `https://counter-core.pages.dev` (or a project-specific subdomain
-shown after the first deploy). Every push to `main` triggers a redeploy automatically.
+1. Repo Settings → **Pages**.
+2. **Source:** `Deploy from a branch`.
+3. **Branch:** `main`, **folder:** `/ (root)`. Save.
+4. Site goes live at `https://ikeem11.github.io/counter-core-landing/` (~1 min).
 
-**Custom domain (optional):** Project → **Custom domains** → add `countercore.app` (or
-whatever you buy). Cloudflare proxies HTTPS automatically; if the domain is registered at
-Cloudflare it's a single click, otherwise add the CNAME at your DNS provider.
+Every push to `main` redeploys automatically.
 
----
+## Custom domain (optional)
 
-## Other deploy targets
-
-- **GitHub Pages** (alternative): rename `landing/` → `docs/` and enable Pages with
-  `main /docs`, or add a static-deploy GitHub Action that uploads `landing/` as the Pages
-  artifact.
-- **Netlify** (alternative): import the repo, publish directory = `landing`, build
-  command blank.
-
----
+Add a `CNAME` file at the repo root containing the domain (e.g. `countercore.app`), then
+point DNS at GitHub Pages (`ikeem11.github.io`).
 
 ## Before submitting to Riot Developer Portal
 
-- Replace `https://countercore.app` with the real deployed URL everywhere in the portal form.
-- Replace `https://countercore.app/privacy` with the real privacy page URL.
-- Confirm the Riot disclaimer is visible on both pages (it is — it appears in the footer
-  of `index.html` and `privacy.html`).
-- Do not publish until Riot registration reaches "Approved" or "Acknowledged" status
-  (`COMPLIANCE.md §8` pre-launch gate).
+- Replace `https://countercore.app` with the live Pages URL everywhere the form asks for
+  it.
+- Replace `https://countercore.app/privacy` with `<pages-url>/privacy.html`.
+- Confirm the Riot disclaimer is visible on both pages (it is — see footer of
+  `index.html` and `privacy.html`).
+- Do not publish the app until Riot registration reaches **"Approved" / "Acknowledged"**
+  status (`COMPLIANCE.md §8` pre-launch gate in the main repo).
