@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CounterCore is a League of Legends companion overlay that gives you real-time, adaptive counter-build recommendations — which items and runes to buy — with plain-language explanations." />
+  <title>CounterCore — Counter-build, in real time.</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- No external network calls. All assets are local. -->
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER
+  ======================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="wordmark" aria-label="CounterCore home">
+        <!-- Tactical crosshair / overlay icon -->
+        <svg class="wordmark-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="26" height="26" rx="4" stroke="#10B981" stroke-width="1.5"/>
+          <circle cx="14" cy="14" r="4" stroke="#10B981" stroke-width="1.5"/>
+          <line x1="14" y1="1" x2="14" y2="7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="14" y1="21" x2="14" y2="27" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="1" y1="14" x2="7" y2="14" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="21" y1="14" x2="27" y2="14" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        Counter<span>Core</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ======================================================
+         HERO
+    ======================================================= -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+
+        <div class="hero-eyebrow">
+          <span class="status-badge">Early Access — Coming Soon</span>
+        </div>
+
+        <h1 class="hero-heading" id="hero-heading">
+          Counter-build,<br/>
+          <em>in real time.</em>
+        </h1>
+
+        <p class="hero-subtext">
+          CounterCore is a League of Legends companion overlay that tells you
+          which items and runes to buy to counter the enemy team you're actually
+          facing — and explains why — all while you play.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn btn-disabled" disabled aria-disabled="true" aria-label="Download for Windows — coming soon">
+            <!-- Windows icon -->
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+              <rect x="8.5" y="1" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+              <rect x="1" y="8.5" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+              <rect x="8.5" y="8.5" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+            </svg>
+            Download for Windows
+          </button>
+          <a href="privacy.html" class="btn btn-ghost">Privacy Policy</a>
+        </div>
+        <p class="coming-soon-note" style="margin-top:0.75rem;">
+          No installer available yet — release is in progress. Check back soon.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FEATURES
+    ======================================================= -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <div class="container">
+
+        <p class="section-label">Core principles</p>
+        <h2 class="section-heading" id="features-heading">Built around four ideas</h2>
+        <p class="section-intro">
+          CounterCore exists to surface the right information at the right moment,
+          without noise, guessing, or dark patterns.
+        </p>
+
+        <div class="features-grid" role="list">
+
+          <!-- Adaptive -->
+          <article class="feature-card" data-accent="emerald" role="listitem">
+            <svg class="feature-icon" data-color="emerald" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <!-- Lightning bolt — reactive / adaptive -->
+              <path d="M21 4L10 20h8l-3 12 14-16h-8l4-12z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+            <h3 class="feature-name">Adaptive</h3>
+            <p class="feature-desc">
+              Reads your live match and reacts to the enemy champions and items
+              you can actually see. Recommendations shift as the game evolves.
+            </p>
+          </article>
+
+          <!-- Explained -->
+          <article class="feature-card" data-accent="blue" role="listitem">
+            <svg class="feature-icon" data-color="blue" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <!-- Speech bubble with text lines — explanation -->
+              <path d="M4 6a2 2 0 012-2h24a2 2 0 012 2v16a2 2 0 01-2 2H10l-6 6V6z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/>
+              <line x1="10" y1="13" x2="26" y2="13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              <line x1="10" y1="19" x2="20" y2="19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+            </svg>
+            <h3 class="feature-name">Explained</h3>
+            <p class="feature-desc">
+              Every recommendation comes with a plain-language reason — not just
+              what to build, but why: "Heavy enemy AP — consider magic resist."
+            </p>
+          </article>
+
+          <!-- Honest -->
+          <article class="feature-card" data-accent="amber" role="listitem">
+            <svg class="feature-icon" data-color="amber" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <!-- Shield with checkmark — honest / trustworthy -->
+              <path d="M18 4l12 4v10c0 7-12 14-12 14S6 25 6 18V8l12-4z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/>
+              <polyline points="13,18 17,22 24,14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="feature-name">Honest</h3>
+            <p class="feature-desc">
+              No guessing. When data is unavailable or confidence is low,
+              CounterCore says so explicitly rather than fabricating an answer.
+            </p>
+          </article>
+
+          <!-- Yours -->
+          <article class="feature-card" data-accent="purple" role="listitem">
+            <svg class="feature-icon" data-color="purple" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <!-- Lock — private / yours -->
+              <rect x="8" y="17" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.75"/>
+              <path d="M12 17v-5a6 6 0 0112 0v5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              <circle cx="18" cy="24" r="2" fill="currentColor"/>
+            </svg>
+            <h3 class="feature-name">Yours</h3>
+            <p class="feature-desc">
+              Works offline once updated. No account required. No tracking.
+              Your match data stays on your machine — it is never sent anywhere.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         HOW IT WORKS
+    ======================================================= -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+
+        <p class="section-label">Under the hood</p>
+        <h2 class="section-heading" id="how-heading">How CounterCore works</h2>
+        <p class="section-intro">
+          A transparent, display-only overlay that reads what the game already
+          shows you — and turns it into a build plan.
+        </p>
+
+        <div class="steps" role="list">
+
+          <div class="step" role="listitem">
+            <div class="step-number">
+              <span>01</span>Step one
+            </div>
+            <p class="step-title">Launch alongside League</p>
+            <p class="step-body">
+              Start CounterCore before or during champion select. It sits idle
+              until a live match begins, then activates automatically.
+            </p>
+          </div>
+
+          <div class="step" role="listitem">
+            <div class="step-number">
+              <span>02</span>Step two
+            </div>
+            <p class="step-title">Reads the live match — locally</p>
+            <p class="step-body">
+              CounterCore reads the League Live Client Data API, which runs on
+              your own machine. It sees which enemy champions you are facing and
+              the items they have visibly equipped — nothing more.
+            </p>
+          </div>
+
+          <div class="step" role="listitem">
+            <div class="step-number">
+              <span>03</span>Step three
+            </div>
+            <p class="step-title">Computes counter-build recommendations</p>
+            <p class="step-body">
+              A bundled counter-knowledge base maps enemy threat profiles to
+              recommended items and runes. Champion and item data come from
+              Riot's official Data Dragon. All processing happens on-device.
+            </p>
+          </div>
+
+          <div class="step" role="listitem">
+            <div class="step-number">
+              <span>04</span>Step four
+            </div>
+            <p class="step-title">Shows a transparent overlay</p>
+            <p class="step-body">
+              A compact strip shows your top recommendation at a glance.
+              Expand it to see up to four prioritized build suggestions, each
+              with a plain-language explanation. Toggle with a hotkey any time.
+            </p>
+          </div>
+
+        </div>
+
+        <ul class="constraint-list" aria-label="What CounterCore does not do">
+          <li>Display-only — CounterCore does not interact with the game, read game memory, or automate any input.</li>
+          <li>No cooldown timers, no power-spike alerts, no action-dictating notifications.</li>
+          <li>Enemy Item Value shown is the summed gold cost of <em>visible</em> items only — not a prediction of unspent gold.</li>
+          <li>Honest empty states when data is missing — no fabricated confidence.</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CTA STRIP
+    ======================================================= -->
+    <section class="cta-strip" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2 id="cta-heading">CounterCore is in development.</h2>
+            <p>Windows release coming soon. Free to use at launch.</p>
+          </div>
+          <div class="cta-actions">
+            <button class="btn btn-disabled" disabled aria-disabled="true" aria-label="Download for Windows — coming soon">
+              Download for Windows
+            </button>
+            <span class="coming-soon-note">No installer yet — release in progress.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-top">
+          <a href="index.html" class="wordmark" aria-label="CounterCore home">
+            <svg class="wordmark-icon" viewBox="0 0 28 28" fill="none" aria-hidden="true" focusable="false" width="22" height="22">
+              <rect x="1" y="1" width="26" height="26" rx="4" stroke="#10B981" stroke-width="1.5"/>
+              <circle cx="14" cy="14" r="4" stroke="#10B981" stroke-width="1.5"/>
+              <line x1="14" y1="1" x2="14" y2="7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="14" y1="21" x2="14" y2="27" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="1" y1="14" x2="7" y2="14" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="21" y1="14" x2="27" y2="14" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Counter<span>Core</span>
+          </a>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:support@countercore.app">support@countercore.app</a>
+            <span class="footer-copyright">&copy; 2025 CounterCore. All rights reserved.</span>
+          </nav>
+        </div>
+
+        <div class="footer-disclaimer" role="note" aria-label="Riot Games disclaimer">
+          <p>
+            CounterCore isn't endorsed by Riot Games and doesn't reflect the views or opinions of
+            Riot Games or anyone officially involved in producing or managing Riot Games properties.
+            League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
